@@ -26,7 +26,7 @@ public class BroadcasterResource {
 
     @POST
     @Produces(MediaType.TEXT_PLAIN)
-    @Consumes(MediaType.TEXT_PLAIN)
+    @Consumes(MediaType.APPLICATION_JSON)
     public String broadcastMessage(String message) {
         OutboundEvent.Builder eventBuilder = new OutboundEvent.Builder();
         OutboundEvent event = eventBuilder.name("message")
